@@ -8,7 +8,9 @@ CREATE TABLE IF NOT EXISTS tier_rulesets (
   activated_at      TIMESTAMPTZ
 );
 
-CREATE INDEX IF NOT EXISTS idx_tier_rulesets_active
+DROP INDEX IF EXISTS idx_tier_rulesets_active;
+
+CREATE UNIQUE INDEX IF NOT EXISTS uq_tier_rulesets_single_active
   ON tier_rulesets(is_active)
   WHERE is_active = TRUE;
 
