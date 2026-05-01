@@ -1,0 +1,4 @@
+{
+  "note": "Keep this file in sync with the active ruleset JSON in db/seeds/seed_tier_rules.sql",
+  "active_version": "1.0.0"
+}
